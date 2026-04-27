@@ -1,49 +1,64 @@
 const advantages = [
   {
-    img: 'https://le-de.cdn-website.com/b6e4cec270014a6fbeb11456622685d5/dms3rep/multi/opt/exp%C3%A9rience-1920w-1920w-1920w.png',
-    title: 'Expérience',
-    text: 'Forte de plusieurs années d\'existence, notre société élagueur détient une parfaite maîtrise des techniques à mettre en œuvre lorsqu\'il s\'agit de faire des travaux d\'élagage.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6">
+        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" strokeLinecap="round" />
+        <path d="M12 6v6l4 2" strokeLinecap="round" />
+      </svg>
+    ),
+    title: 'Méthodes Durables',
+    text: 'Des approches respectueuses de l\'écosystème local et sans produits chimiques agressifs.',
   },
   {
-    img: 'https://le-de.cdn-website.com/b6e4cec270014a6fbeb11456622685d5/dms3rep/multi/opt/equipe-1920w-1920w.png',
-    title: 'Équipe',
-    text: 'Notre équipe est composée d\'élagueurs, d\'arboristes grimpeurs et de jardiniers paysagistes, entre autres.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" strokeLinecap="round" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" strokeLinecap="round" />
+      </svg>
+    ),
+    title: 'Équipe Experte',
+    text: 'Des élagueurs grimpeurs et jardiniers paysagistes diplômés et passionnés par leur métier.',
   },
   {
-    img: 'https://le-de.cdn-website.com/b6e4cec270014a6fbeb11456622685d5/dms3rep/multi/opt/recycleduda1-1920w-%281%29-1920w-1920w.png',
-    title: 'Environnement',
-    text: 'Les travaux d\'élagage réalisés par nos soins sont respectueux des règles horticoles, des végétaux et de l\'environnement.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" strokeLinecap="round" />
+      </svg>
+    ),
+    title: 'Matériel Moderne',
+    text: 'Équipement de pointe, électrique et performant pour un travail précis et propre.',
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6">
+        <path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    title: 'Devis Gratuit',
+    text: 'Chaque projet est pensé sur mesure avec un devis gratuit et sans engagement.',
   },
 ]
 
 export default function Advantages() {
   return (
-    <section className="py-14 bg-white">
-      <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#2d5a27] mb-2">Nos avantages</h2>
-        <div className="w-12 h-1 bg-[#4a7c3f] mx-auto mb-10 rounded-full" />
-        <div className="grid md:grid-cols-3 gap-6">
-          {advantages.map((a) => (
-            <div key={a.title} className="bg-[#f4f9f2] rounded-lg overflow-hidden border border-[#d4e8cf] hover:shadow-md transition-shadow">
-              <div className="h-40 overflow-hidden">
-                <img src={a.img} alt={a.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-              </div>
-              <div className="p-5 text-center">
-                <h3 className="text-xl font-bold text-[#2d5a27] mb-2">{a.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{a.text}</p>
-              </div>
-            </div>
-          ))}
+    <section className="py-20 bg-[#f8faf7]">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="text-center mb-14">
+          <p className="text-xs uppercase tracking-widest text-[#4a7c3f] font-semibold mb-3">Nos Avantages</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Pourquoi nous choisir</h2>
         </div>
 
-        <div className="mt-12 bg-[#2d5a27] text-white rounded-lg p-8">
-          <h3 className="text-2xl font-bold text-center mb-3">Notre zone d'intervention</h3>
-          <div className="w-10 h-0.5 bg-white/40 mx-auto mb-4" />
-          <p className="text-green-200 text-sm leading-relaxed text-center max-w-xl mx-auto">
-            Nous intervenons dans tout le département des Vosges (88) et ses alentours :
-            Saint-Dié-des-Vosges, Épinal, Remiremont, Gérardmer, Bruyères, Senones,
-            Raon-l'Étape et toutes les communes environnantes.
-          </p>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {advantages.map((a) => (
+            <div key={a.title} className="bg-white rounded-2xl p-6 hover:shadow-md transition-shadow group border border-gray-100">
+              <div className="w-11 h-11 rounded-xl bg-[#f4f9f2] flex items-center justify-center text-[#4a7c3f] mb-4 group-hover:bg-[#4a7c3f] group-hover:text-white transition-all duration-300">
+                {a.icon}
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2 text-sm">{a.title}</h3>
+              <p className="text-gray-500 text-xs leading-relaxed">{a.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
